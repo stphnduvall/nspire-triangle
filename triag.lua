@@ -82,7 +82,7 @@ function on.construction()
       y = (math.floor(i/2))*h/6
     end
 
-    inputs[i] = Input(x, y, h/6, 3*w/8, "blank")
+    inputs[i] = Input(x, y, h/6, 3*w/8, "Blank")
   end
 
 -- Set focus on first input box
