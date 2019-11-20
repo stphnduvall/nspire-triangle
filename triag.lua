@@ -60,6 +60,10 @@ function on.paint(gc)
       x = 0
       y = (math.floor(i/2))*h/6
     end
+
+    y = (((h / 6) - gc:getStringHeight(strings[i].. " = ")) / 2) + y
+    x = (((w / 8) - gc:getStringWidth(strings[i].. " = ")) / 2) + x
+
     gc:drawString(strings[i].." = ", x, y)
   end
 end
