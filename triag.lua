@@ -38,8 +38,6 @@ function Input:init(x, y, h, w, text)
   self.editor = D2Editor.newRichText()
   self.editor
     :setTextColor(0x000000)
-    :setBorder(1)
-    :setBorderColor(0xe8e8e8)
     :setText(self.text)
     :setFontSize(12)
     :setVisible(true)
