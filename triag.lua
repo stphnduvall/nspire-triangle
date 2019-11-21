@@ -126,19 +126,29 @@ function on.backtabKey()
   end
 end
 
---
---function on.resize()
---  w = platform.window:width()
---  h = platform.window:height()
---
---  for i = 1, 6, 1 do
---    inputs[i].editor:resize(100, h/7):move(40, (i - 1)*6/h)
---  end
---
---  platform.window:invalidate()
---
---  print("resized")
---end
+
+function on.resize()
+  w = platform.window:width()
+  h = platform.window:height()
+
+  for i = 1, 6, 1 do
+    local x, y
+
+    if i % 2 == 0 then
+      x = w/2 + (w / 8)
+      y = (math.floor(i/2) - 1)*h/6
+    else
+      x = 0 + (w / 8)
+      y = (math.floor(i/2))*h/6
+    end
+
+    inputs[i].editor:move(x, y):resize(3*w/8, h/6)
+  end
+
+  platform.window:invalidate()
+
+  print("resized")
+end
 --
 --function on.escapeKey()
 --  platform.window:invalidate()
