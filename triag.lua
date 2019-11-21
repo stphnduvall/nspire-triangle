@@ -15,6 +15,19 @@ local strings = {}
   strings[5] = "C"
   strings[6] = "c"
 
+function calc() end
+function storeAns() end
+
+local menu = {
+  { "Solve",
+    { "Calculate", calc },
+    { "Store", storeAns }
+  }
+}
+
+toolpalette.register(menu)
+toolpalette.enable("Solve", "Calculate", true)
+
 function Input:init(x, y, h, w, text)
   self.x = x
   self.y = y
