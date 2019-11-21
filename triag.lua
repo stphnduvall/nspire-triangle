@@ -149,9 +149,3 @@ function on.resize()
 
   print("resized")
 end
---
---function on.escapeKey()
---  platform.window:invalidate()
---  on.resize()
---  print("escaped")
---end
