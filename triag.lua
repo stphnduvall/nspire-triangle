@@ -126,7 +126,6 @@ function on.backtabKey()
   end
 end
 
-
 function on.resize()
   w = platform.window:width()
   h = platform.window:height()
