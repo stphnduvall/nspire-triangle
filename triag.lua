@@ -28,11 +28,11 @@ local menu = {
 toolpalette.register(menu)
 toolpalette.enable("Solve", "Calculate", true)
 
-function Input:init(x, y, h, w, text)
+function Input:init(x, y, height, width, text)
   self.x = x
   self.y = y
-  self.h = h
-  self.w = w
+  self.h = height
+  self.w = width
   self.text = text
 
   self.editor = D2Editor.newRichText()
@@ -83,7 +83,7 @@ function on.construction()
 
 --  Draw input boxes
   for i = 1, 6, 1 do
-    local x, y
+    local x, y, v
 
     if i % 2 == 0 then
       x = w/2 + (w / 8)
@@ -93,7 +93,9 @@ function on.construction()
       y = (math.floor(i/2))*h/6
     end
 
-    inputs[i] = Input(x, y, h/6, 3*w/8, "Blank")
+    v = ((h/6) - 26 ) / 2
+
+    inputs[i] = Input(x, y + v, 26, 3*w/8, "")
   end
 
 -- Set focus on first input box
@@ -129,7 +131,7 @@ function on.resize()
   h = platform.window:height()
 
   for i = 1, 6, 1 do
-    local x, y
+    local x, y, v
 
     if i % 2 == 0 then
       x = w/2 + (w / 8)
@@ -139,7 +141,9 @@ function on.resize()
       y = (math.floor(i/2))*h/6
     end
 
-    inputs[i].editor:move(x, y):resize(3*w/8, h/6)
+    v = ((h/6) - 26 ) / 2
+
+    inputs[i].editor:move(x, y + v):resize(3*w/8, 26)
   end
 
   platform.window:invalidate()
