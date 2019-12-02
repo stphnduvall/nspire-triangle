@@ -30,17 +30,22 @@ function calc()
   platform.window:invalidate(0, h/2, w, h/2)
 end
 
-function storeAns() end
+function clearInputs()
+  for i = 1, 6, 1 do
+    inputs[i].editor:setText("")
+  end
+end
 
 local menu = {
   { "Solve",
     { "Calculate", calc },
-    { "Store", storeAns }
+    { "Clear", clearInputs }
   }
 }
 
 toolpalette.register(menu)
 toolpalette.enable("Solve", "Calculate", true)
+toolpalette.enable("Solve", "Clear", true)
 
 function Input:init(x, y, height, width, text)
   self.x = x
