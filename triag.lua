@@ -126,6 +126,7 @@ function on.paint(gc)
         gc:drawString(strings[i] .. answers[i + 1], w/2 + x, y)
       end
 
+      answers = { "Press Menu > Solve > Calculate" }
     end
   end
 
