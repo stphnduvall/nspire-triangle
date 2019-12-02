@@ -106,6 +106,8 @@ function on.paint(gc)
       for i = 2, 7, 1 do
         if type(answers[i]) == "table" then
           answers[i] = round(answers[i][1]) .. " or " .. round(answers[i][2])
+        else
+          answers[i] = round(answers[i])
         end
       end
 
