@@ -112,7 +112,7 @@ function on.paint(gc)
       end
 
       for i = 1, 6, 2 do
-        width = gc:getStringWidth(strings[i] .. answers[1+1])
+        width = gc:getStringWidth(strings[i] .. answers[i+1])
         y = y + height
         x = (w/2 - width) / 2
         gc:drawString(strings[i] .. answers[i + 1], x, y)
