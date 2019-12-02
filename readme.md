@@ -17,3 +17,11 @@ and you should be able to figure it out.
 The triangles solution should be displayed on the lower half of the screen. If
 there are 2 solutions they will be shown in the same location but will read
 `"value 1 or value 2"`
+
+## To Do
+- [ ] Figure out if I can remove the sub level of the menu
+- [ ] If I can't rename it to something like "Menu"
+- [ ] Convert the string to not overwrite the answers array
+- [ ] Add option to save output to variables then into another document
+- [ ] Add option to save inputs
+- [ ] Add on.save event handler to save inputs and answer outputs
