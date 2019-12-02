@@ -120,9 +120,6 @@ function on.paint(gc)
 
       y = h/2
       for i = 2, 6, 2 do
-        if type(answers[i+1]) == "table" then
-          answers[i+1] = answers[i+1][1] .. " or " .. answers[i+1][2]
-        end
         width = gc:getStringWidth(strings[i] .. answers[1+1])
         y = y + height
         x = (w/2 - width) / 2
