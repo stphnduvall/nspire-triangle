@@ -3,6 +3,8 @@ I started to learn about Lua scripting for the TI-Nspire suite of calculators.
 There is a lot of cosmetic work to be done for this project however it currently
 functions quite well. If it isn't broke, don't fix it.
 
+![screenshot](SSS&#32;screenshot.png)
+
 ## Compile
 Compile the Lua file to a tns file, then download it to a supported device. I
 suggest using [Luna](https://github.com/ndless-nspire/Luna) to compile, its easy
